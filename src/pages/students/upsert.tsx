@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, TextField, Typography } from '@mui/material';
+import { Box, TextField } from '@mui/material';
 import { useFormik } from 'formik';
 import InputMask from 'react-input-mask';
 import React, { useEffect } from 'react';
@@ -25,7 +25,6 @@ export default function UpsertStudent(props: any) {
 
   const [student, setStudent] = React.useState<any>(null)
   const [loading, setLoading] = React.useState<any>(false)
-  const [refreshAutocomplete, setRefreshAutocomplete] = React.useState<any>(false)
 
   useEffect(() => {
     const getStudentById: any = async () => {

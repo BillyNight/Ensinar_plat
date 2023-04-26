@@ -1,4 +1,4 @@
-import { AccessibilityNew, Article, LocalHospital, MedicalInformation, Error, AssignmentTurnedIn, CurrencyExchange, Dashboard, ExitToApp, Favorite, Groups, Layers, MedicalServices, Menu, MenuOpen, PriorityHigh, WorkspacePremium, History, Check, CheckBox, CheckBoxOutlined, AttachMoney } from '@mui/icons-material'
+import { Dashboard, ExitToApp, Groups, Menu, MenuOpen, } from '@mui/icons-material'
 import { Box, Drawer, Icon, List, ListItem, ListItemIcon, ListItemText, Tooltip } from '@mui/material'
 import { useContext } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
@@ -11,7 +11,6 @@ export default function Layout(props: any) {
 
   const { children } = props
   const navigate = useNavigate()
-  const location: any = useLocation()
 
   const { setLoggedUser }: any = useContext(GlobalContext)
 
@@ -20,8 +19,6 @@ export default function Layout(props: any) {
     navigate('/')
   }
 
-  // const breadcrumbsPaths: any = location.pathname.split('/')
-  const breadcrumbsPaths: any = location.pathname.split('/').filter((path: any) => path)
 
   const menu: any = [
       {

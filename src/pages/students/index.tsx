@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import DataGrid from '../../components/DataGrid';
 import HeaderLayout from '../../components/Layout/Header';
 import { GlobalContext, GlobalContextType } from '../../contexts/global';
-import LoadingComponent from '../../components/Loading'
 
 
 
@@ -13,9 +12,8 @@ export default function studentsIndex() {
 
 
   const navigate = useNavigate()
-  const { loggedUser, setLoggedUser, students } = useContext<GlobalContextType>(GlobalContext)
+  const { students } = useContext<GlobalContextType>(GlobalContext)
 
-  const [loading, setLoading] = useState<any>(true)
 
   const studentsTableData: any = {
     columns: [
